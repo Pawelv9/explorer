@@ -11,7 +11,7 @@ export class ServerStatus {
   currentStatus: 'online' | 'offline' | 'unknown' = 'offline';
 
   constructor() {
-    setTimeout(() => {
+    setInterval(() => {
       const rnd = Math.random();
       if (rnd < 0.5) {
         this.currentStatus = 'online';
@@ -20,6 +20,7 @@ export class ServerStatus {
       } else {
         this.currentStatus = 'unknown';
       }
-    }, 5000)
+      console.log(this.currentStatus);
+    }, 500)
   }
 }

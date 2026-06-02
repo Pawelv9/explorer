@@ -8,5 +8,18 @@ import { Component } from '@angular/core';
   styleUrl: './server-status.css',
 })
 export class ServerStatus {
-  currentStatus = 'online';
+  currentStatus: 'online' | 'offline' | 'unknown' = 'offline';
+
+  constructor() {
+    setTimeout(() => {
+      const rnd = Math.random();
+      if (rnd < 0.5) {
+        this.currentStatus = 'online';
+      } else if (rnd < 0.9) {
+        this.currentStatus = 'offline';
+      } else {
+        this.currentStatus = 'unknown';
+      }
+    }, 5000)
+  }
 }

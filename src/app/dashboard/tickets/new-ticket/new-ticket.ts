@@ -15,7 +15,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './new-ticket.css',
 })
 export class NewTicket {
-  onSubmit() {
-    console.log('Submitted')
+  onSubmit(titleElement: HTMLInputElement) {
+    const enteredTitle = titleElement.value;
+    console.log(enteredTitle);
   }
 }

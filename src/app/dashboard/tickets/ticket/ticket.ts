@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TicketInterface } from './ticket.model';
 
 @Component({
   selector: 'app-ticket',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './ticket.html',
   styleUrl: './ticket.css',
 })
-export class Ticket {}
+export class Ticket {
+  tickets: TicketInterface[] = [];
+}

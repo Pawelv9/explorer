@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TicketInterface } from './ticket.model';
 
 @Component({
   selector: 'app-ticket',
@@ -9,5 +8,4 @@ import { TicketInterface } from './ticket.model';
   styleUrl: './ticket.css',
 })
 export class Ticket {
-  tickets: TicketInterface[] = [];
 }

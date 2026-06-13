@@ -18,7 +18,7 @@ export class NewTicket {
   // @ViewChild('form') form?: ElementRef<HTMLFormElement>;
   private form = viewChild.required<ElementRef<HTMLFormElement>>('form')
   // @Output() add = new EventEmitter<{ title: string; text: string }>();
-  @Output() add = output<{ title: string; text: string }>()
+  add = output<{ title: string; text: string }>()
 
   onSubmit(title: string, ticketText: string): void {
     this.add.emit({ title, text: ticketText })
